@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hashing Collision Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Hashing Collision Resolution Simulator</h1>
+    <p class="intro">
+      This website shows how collisions in hashing are solved using
+      Linear Probing, Quadratic Probing, and Double Hashing.
+    </p>
+
+    <div class="card">
+      <input type="number" id="keyInput" placeholder="Enter key" />
+
+      <select id="method">
+        <option value="linear">Linear Probing</option>
+        <option value="quadratic">Quadratic Probing</option>
+        <option value="double">Double Hashing</option>
+      </select>
+
+      <button onclick="insertKey()">Insert</button>
+      <button onclick="searchKey()">Search</button>
+      <button onclick="resetTable()">Reset</button>
+    </div>
+
+    <h2>Hash Table</h2>
+    <div id="table" class="table"></div>
+
+    <h2>Steps</h2>
+    <div id="steps" class="steps">Enter a key and click Insert.</div>
+
+    <h2>Formula Used</h2>
+    <div id="formula" class="formula">
+      h(key) = key % tableSize
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
